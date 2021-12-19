@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="framework/bootstrap/css/bootstrap.min.css">
+    <title>Project 4</title>
+</head>
+<body>
+    <div class="container pt-5">
+        <div class="card">
+            <div class="card-header bg-primary">
+                <h4 class="text-white mb-0">Project 4</h4>
+            </div>
+            <div class="card-body">
+                <h5>Hitung Luas</h5>
+                <select class="form-select mb-4">
+                    <option selected disabled>-- Pilih Bangun Ruang --</option>
+                    <option value="persegi">Persegi/Persegi panjang</option>
+                    <option value="segitiga">Segitiga</option>
+                </select>
+
+                <!-- Persegi/Persegi panjang -->
+                <form class="persegi box">
+                    <h5>Persegi/Persegi panjang</h5>
+                    <div class="form-group">
+                        <label for="panjang">Panjang</label>
+                        <input type="text" class="form-control" name="panjang" id="panjang" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lebar">Lebar</label>
+                        <input type="text" class="form-control" name="lebar" id="lebar" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="luas">Luas</label>
+                        <input type="text" class="form-control bg-white" name="luas" id="luasPersegi" required readonly>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <input type="button" class="btn btn-primary w-100" value="Hitung" onclick="hitungLuasPersegi()">
+                        </div>
+                        <div class="col-6">
+                            <input type="button" class="btn btn-secondary w-100" value="Reset" onclick="reset()">
+                        </div>
+                    </div>
+                </form>
+                <!-- Segituga -->
+                <form class="segitiga box">
+                    <h5>Segitiga</h5>
+                    <div class="form-group">
+                        <label for="alas">Alas</label>
+                        <input type="text" class="form-control" name="alas" id="alas" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tinggi">Tinggi</label>
+                        <input type="text" class="form-control" name="tinggi" id="tinggi" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="luas">Luas</label>
+                        <input type="text" class="form-control bg-white" name="luas" id="luasSegitiga" required readonly>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <input type="button" class="btn btn-primary w-100" value="Hitung" onclick="hitungLuasSegitiga()">
+                        </div>
+                        <div class="col-6">
+                            <input type="button" class="btn btn-secondary w-100" value="Reset" onclick="reset()">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="framework/jquery/js/jquery.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</html>
